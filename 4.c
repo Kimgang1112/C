@@ -6,7 +6,6 @@
 #define MAX_LEN 51
 
 char* arr[MAX_N];
-
 int cmp(const void* a, const void* b) {
     char* s1 = *(char**)a;
     char* s2 = *(char**)b;
