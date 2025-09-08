@@ -6,7 +6,7 @@ int main() {
 
     int arr[n][m];
     int num = 1;
-
+ 
    
     for (int diag = 0; diag < n + m - 1; diag++) {
         int row_start = (diag < n) ? diag : n - 1;
