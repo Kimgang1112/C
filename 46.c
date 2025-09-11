@@ -25,7 +25,8 @@ int main(void){
         printf("%d\n",arr2[i]);
     }
 
-
+    free(arr);
+    free(arr2);
 
 
 

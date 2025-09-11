@@ -20,6 +20,7 @@ int main(void){
 
     printf("%d",sum);
 
+    free(arr);
 
 
 }
