@@ -6,33 +6,46 @@ typedef struct {
     int kor, eng, math;
 } Student;
 
+
+void bubble_sort(Student *a, int *b,int n){
+    for (int j=0; j<n-1; j++){
+        for (int i=0; i<n-j-1; i++){
+            if (b[i]<b[i+1]){
+                int temp=b[i];
+                b[i]=b[i+1];
+                b[i+1]=temp;
+                Student student=a[i];
+                a[i]=a[i+1];
+                a[i+1]=student;
+            } else if(b[i]==b[i+1]){
+                if (strcmp(a[i].name,a[i+1].name)>0){
+                    Student student=a[i];
+                    a[i]=a[i+1];
+                    a[i+1]=student;
+                }
+            }
+        }
+    }
+}
+
 int main() {
     int N;
     scanf("%d", &N);
     Student students[N];
-
-    int sumKor = 0, sumEng = 0, sumMath = 0;
+    int arr[N];
+    
 
     for (int i = 0; i < N; i++) {
         scanf("%s %d %d %d", students[i].name, 
               &students[i].kor, &students[i].eng, &students[i].math);
-        sumKor += students[i].kor;
-        sumEng += students[i].eng;
-        sumMath += students[i].math;
+        arr[i]=students[i].kor+students[i].eng+students[i].math;
+        
     }
 
-    double avgKor = (double)sumKor / N;
-    double avgEng = (double)sumEng / N;
-    double avgMath = (double)sumMath / N;
+    
 
     for (int i = 0; i < N; i++) {
-        if (students[i].kor >= avgKor &&
-            students[i].eng >= avgEng &&
-            students[i].math >= avgMath) {
-            students[i].kor = 100;
-            students[i].eng = 100;
-            students[i].math = 100;
-        }
+        bubble_sort(students,arr,N);
     }
 
     for (int i = 0; i < N; i++) {
