@@ -20,6 +20,7 @@ int main() {
     
     for (int i = 0; i < N; i++) {
         scanf("%s %d", students[i].name, &students[i].score);
+        sum=sum;
         sum += students[i].score;
     }
 
