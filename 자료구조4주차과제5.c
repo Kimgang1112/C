@@ -15,8 +15,9 @@ int main() {
         printf("Memory allocation failed\n");
         return 1;
     }
-
-    int sum = 0;
+    int sum;
+    sum=0;
+    
     for (int i = 0; i < N; i++) {
         scanf("%s %d", students[i].name, &students[i].score);
         sum += students[i].score;
