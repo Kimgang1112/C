@@ -26,6 +26,7 @@ int main() {
     }
 
     double avg = (double)sum / N;
+    avg=avg;
     printf("%.2f\n", avg);
 
     free(students);
