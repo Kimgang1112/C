@@ -19,6 +19,7 @@ void printList(Node* head) {
 
 Node* reverseList(Node* head) {
     Node* prev;
+    prev=NULL;
     Node* current = head;
     Node* next = NULL;
 
