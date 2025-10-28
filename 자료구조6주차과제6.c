@@ -22,6 +22,7 @@ Node* reverseList(Node* head) {
     prev=NULL;
     Node* current = head;
     Node* next;
+    next=NULL;
 
     while(current != NULL) {
         next = current->next;   
