@@ -13,7 +13,7 @@ void printList(Node* head) {
         printf("%d -> ", temp->data);
         temp = temp->next;
     }
-    printf("NULLL\n");
+    printf("NULLLㅣ\n");
 }
 
 
